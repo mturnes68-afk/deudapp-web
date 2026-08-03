@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeudApp - Controla tus deudas y cobros de forma fácil y segura</title>
+    <meta name="description" content="Gestiona tus deudas, ventas y abonos en tiempo real. Soporte multimoneda, funcionamiento offline y comprobantes de pago digitalizados.">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo.svg" alt="DeudApp Logo" class="nav-logo-img"><span class="logo-text"><span class="logo-deud">Deud</span><span class="logo-app">App</span></span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#features">Funciones</a>
+                <a href="#how-it-works">Cómo Funciona</a>
+                <a href="#pricing">Planes</a>
+                <a href="#" id="open-privacy-btn" class="nav-link-secondary">Privacidad</a>
+                <a href="#download" class="btn btn-primary btn-nav">Descargar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Disponible en Android</span>
+                <h1>Toma el control absoluto de tus deudas y cobros</h1>
+                <p>La herramienta definitiva para emprendedores, comerciantes y redes de venta. Registra deudas, comparte cobros y confirma abonos al instante, incluso sin conexión a internet.</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">Descargar Gratis</a>
+                    <a href="#features" class="btn btn-secondary">Conocer Más</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- CSS PHONE MOCKUP WITH ACCURATE SALES HOME SCREEN -->
+                <div class="phone-mockup">
+                    <div class="phone-speaker"></div>
+                    <div class="phone-screen">
+                        <!-- App Header -->
+                        <div class="app-header">
+                            <div class="app-header-logo">
+                                <span class="header-logo-box">D</span>
+                                <span class="header-logo-text"><span class="hdr-deud">Deud</span><span class="hdr-app">App</span></span>
+                            </div>
+                            <div class="app-header-icons">
+                                <span><i data-lucide="help-circle" class="hdr-icon"></i></span>
+                                <span><i data-lucide="cloud" class="hdr-icon text-primary"></i></span>
+                                <span><i data-lucide="bell" class="hdr-icon"></i></span>
+                            </div>
+                        </div>
+                        
+                        <!-- App Tabs -->
+                        <div class="app-tabs">
+                            <div class="app-tab active">VENTAS</div>
+                            <div class="app-tab">COMPRAS</div>
+                        </div>
+
+                        <!-- Date Range Selector -->
+                        <div class="app-filters-label">Rango de Fecha</div>
+                        <div class="app-filters-row">
+                            <span class="filter-opt">Hoy</span>
+                            <span class="filter-opt">Esta semana</span>
+                            <span class="filter-opt active">Este mes</span>
+                            <span class="filter-opt">Mes anterior</span>
+                        </div>
+
+                        <!-- Section Header -->
+                        <div class="app-section-title">Balance Cobros</div>
+
+                        <!-- Metric Cards -->
+                        <div class="app-metric-list">
+                            <!-- Card Facturado -->
+                            <div class="metric-item border-primary">
+                                <div class="metric-icon-box bg-primary-light">
+                                    <i data-lucide="file-text" class="metric-svg-primary"></i>
+                                </div>
+                                <div class="metric-data">
+                                    <span class="metric-label">Facturado</span>
+                                    <span class="metric-val text-primary">$1.500,00</span>
+                                </div>
+                            </div>
+                            <!-- Card Abonado -->
+                            <div class="metric-item border-success">
+                                <div class="metric-icon-box bg-success-light">
+                                    <i data-lucide="check-circle" class="metric-svg-success"></i>
+                                </div>
+                                <div class="metric-data">
+                                    <span class="metric-label">Abonado de Clientes</span>
+                                    <span class="metric-val text-success">$1.200,00</span>
+                                </div>
+                            </div>
+                            <!-- Card Pendiente -->
+                            <div class="metric-item border-warning">
+                                <div class="metric-icon-box bg-warning-light">
+                                    <i data-lucide="clock" class="metric-svg-warning"></i>
+                                </div>
+                                <div class="metric-data">
+                                    <span class="metric-label">Pendiente Por Cobrar</span>
+                                    <span class="metric-val text-warning">$300,00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- App Bottom Navigation -->
+                        <div class="app-navbar">
+                            <span class="active-nav"><i data-lucide="home"></i></span>
+                            <span><i data-lucide="bar-chart-2"></i></span>
+                            <span><i data-lucide="user"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por qué elegir DeudApp?</h2>
+                <p>Diseñada específicamente para facilitar el cobro diario y la claridad de cuentas entre vendedores y compradores.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="cloud"></i></div>
+                    <h3>Sincronización en la Nube</h3>
+                    <p>Tus cuentas siempre respaldadas de forma automática en una base de datos segura y encriptada.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="wifi-off"></i></div>
+                    <h3>Funcionamiento Offline</h3>
+                    <p>¿Sin señal en la calle? Registra deudas y abonos normalmente. La app sincronizará todo de forma automática al recuperar tu conexión.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="camera"></i></div>
+                    <h3>Comprobantes Digitales</h3>
+                    <p>Adjunta fotografías o capturas de pantalla de Pago Móvil directamente en los abonos para evitar malentendidos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="bell"></i></div>
+                    <h3>Notificaciones en Tiempo Real</h3>
+                    <p>Mantente al tanto de la actividad de tu red. Recibe alertas push nativas cuando un cobro sea registrado o un pago sea reportado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cómo Funciona</h2>
+                <p>Optimiza tu flujo de cobranzas en tres sencillos pasos.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Registra tu Cuenta</h3>
+                        <p>Crea tu perfil de vendedor o cobrador de forma gratuita en la app utilizando tu correo electrónico.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Anota las Ventas o Deudas</h3>
+                        <p>Ingresa los montos de tus ventas de manera rápida e identifica al comprador, con soporte multimoneda inmediato.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Adjunta y Confirma Abonos</h3>
+                        <p>Tus compradores reportan pagos adjuntando su comprobante bancario. Tú los revisas y los apruebas al instante en un toque.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING / PLANES SECTION -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Planes</h2>
+                <p>Elige el plan ideal para tus operaciones. Pensado para crecer contigo.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- PLAN GRATIS -->
+                <div class="price-card">
+                    <span class="plan-badge">Inicial</span>
+                    <h3>Plan Básico</h3>
+                    <div class="price-amount">$0<span>/ siempre gratis</span></div>
+                    <p class="plan-desc">Perfecto para llevar cuentas individuales y empezar a digitalizar tus cobros.</p>
+                    <ul class="plan-features">
+                        <li>✅ Registro de deudas ilimitadas</li>
+                        <li>✅ Sincronización en la nube</li>
+                        <li>✅ Soporte sin conexión a internet</li>
+                        <li>✅ Adjuntar capturas de pago</li>
+                        <li>❌ Contiene anuncios discretos</li>
+                    </ul>
+                    <a href="#download" class="btn btn-secondary btn-full">Comenzar Ahora</a>
+                </div>
+                <!-- PLAN PREMIUM -->
+                <div class="price-card premium">
+                    <span class="plan-badge bg-gold">Recomendado</span>
+                    <h3>Plan Premium Pro</h3>
+                    <div class="price-amount">$5<span>/ mes</span></div>
+                    <p class="plan-desc">Diseñado para comerciantes y redes de venta que buscan una experiencia profesional libre de distracciones.</p>
+                    <ul class="plan-features">
+                        <li>✅ Todo lo del Plan Básico</li>
+                        <li>✅ **Sin anuncios** (Interfaz 100% limpia)</li>
+                        <li>✅ Enlaces directos de Pago Móvil del vendedor</li>
+                        <li>✅ Soporte técnico prioritario</li>
+                        <li>✅ Métodos de pago flexibles (Pago Móvil / Zelle)</li>
+                    </ul>
+                    <a href="#download" class="btn btn-primary btn-full">Hacerse Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD / ACCION SECTION -->
+    <section class="download" id="download">
+        <div class="container download-container">
+            <h2>Comienza a digitalizar tus cobros hoy</h2>
+            <p>Descarga la aplicación en tu dispositivo Android y empieza a tener claridad en tus cuentas en menos de 2 minutos.</p>
+            <div class="download-buttons">
+                <!-- MOCK GOOGLE PLAY BUTTON -->
+                <a href="https://play.google.com/store/apps/details?id=com.aistudio.deudapp.wqpzld" target="_blank" class="store-button">
+                    <span class="store-icon"><i data-lucide="play" style="color: #1a1a1a;"></i></span>
+                    <span class="store-text">
+                        <small>DESCARGAR EN</small>
+                        <strong>Google Play</strong>
+                    </span>
+                </a>
+                <!-- DIRECT APK MOCK BUTTON -->
+                <a href="deudapp.apk" download="deudapp.apk" class="store-button btn-apk-style">
+                    <span class="store-icon"><i data-lucide="download" style="color: white;"></i></span>
+                    <span class="store-text">
+                        <small>DESCARGA DIRECTA</small>
+                        <strong>Archivo APK</strong>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 DeudApp. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#" id="open-privacy-footer">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PRIVACY POLICY MODAL -->
+    <div class="modal-overlay" id="privacy-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Política de Privacidad de DeudApp</h2>
+                <button class="close-modal-btn" id="close-privacy-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="updated-date">Última actualización: 02 de Agosto de 2026</p>
+                <p>El presente documento describe cómo <strong>DeudApp</strong> (en adelante "la Aplicación") recopila, utiliza y protege la información de los usuarios (en adelante "el Usuario"). Nos tomamos muy en serio la privacidad y la confidencialidad de sus registros financieros.</p>
+
+                <h3>1. Responsable del Tratamiento de los Datos</h3>
+                <p>Para cualquier consulta respecto a esta política de privacidad, el Usuario puede ponerse en contacto a través de nuestro correo de soporte: <strong>deudapp.soporte@gmail.com</strong>.</p>
+
+                <h3>2. Datos Personales que Recopilamos</h3>
+                <p>La Aplicación recopila únicamente los datos necesarios para gestionar la contabilidad de deudas y registrar los cobros:</p>
+                <ul>
+                    <li><strong>Datos de Cuenta y Perfil:</strong> Correo electrónico, nombre completo o identificativos proporcionados por el Usuario al registrarse.</li>
+                    <li><strong>Datos de Cobros y Pago Móvil:</strong> Para los vendedores, la Aplicación almacena la Cédula de Identidad (C.I.), número de teléfono asociado y banco destino, requeridos para que los compradores puedan realizar y verificar los pagos móviles de forma correcta.</li>
+                    <li><strong>Datos Financieros y de Deudas:</strong> Información sobre ventas, deudas y cobros (montos, nombres y apellidos asignados a compradores/vendedores, números telefónicos de contacto y conceptos de deudas) ingresados de forma manual por el Usuario.</li>
+                    <li><strong>Comprobantes de Pago:</strong> Fotografías, imágenes de capturas de pantalla de Pago Móvil o transferencias bancarias que el Usuario adjunte voluntariamente para justificar los abonos realizados.</li>
+                    <li><strong>Datos Técnicos y del Dispositivo:</strong> Identificador único de dispositivo requerido para la recepción de notificaciones push en tiempo real y registros de diagnóstico anónimos en caso de fallas de software (reportes de cierres inesperados).</li>
+                </ul>
+
+                <h3>3. Permisos Requeridos del Dispositivo</h3>
+                <p>La Aplicación solicitará los siguientes permisos de hardware, los cuales el Usuario puede otorgar o revocar desde la configuración de su teléfono:</p>
+                <ul>
+                    <li><strong>Cámara y Almacenamiento (Galería):</strong> Utilizados única y exclusivamente cuando el Usuario decida capturar o seleccionar una imagen de un recibo o comprobante de pago para adjuntarlo a una de las deudas en la aplicación.</li>
+                    <li><strong>Datos Biométricos (Huella/FaceID):</strong> Utilizados de forma estrictamente local para el bloqueo de seguridad de la app. La Aplicación no recopila ni almacena sus datos biométricos físicos en servidores externos.</li>
+                    <li><strong>Acceso a Red (Internet):</strong> Requerido para sincronizar sus registros locales con su base de datos en la nube.</li>
+                </ul>
+
+                <h3>4. Resguardo y Almacenamiento de Datos</h3>
+                <ul>
+                    <li><strong>Seguridad en la Nube:</strong> Los datos se transmiten de forma encriptada (HTTPS) y se almacenan en servidores seguros administrados en la nube por proveedores de infraestructura de datos de confianza.</li>
+                    <li><strong>Acceso Restringido:</strong> Implementamos políticas estrictas de seguridad para asegurar que ningún usuario pueda leer ni modificar información que pertenezca a otra cuenta.</li>
+                    <li><strong>Almacenamiento Local:</strong> La app guarda una copia local encriptada de sus transacciones en el dispositivo para permitir su uso sin conexión a internet.</li>
+                </ul>
+
+                <h3>5. Proveedores de Servicios y Publicidad de Terceros</h3>
+                <p>Para la prestación técnica del servicio y su sostenibilidad comercial, la Aplicación utiliza integraciones de proveedores tecnológicos de primer nivel:</p>
+                <ul>
+                    <li><strong>Google Play Services:</strong> Google recopila de forma automática estadísticas de descarga, instalaciones, desinstalaciones y rendimiento técnico general de la app desde la Google Play Store.</li>
+                    <li><strong>Google Firebase (FCM & Crashlytics):</strong>
+                        <ul>
+                            <li>Utilizamos servicios de mensajería externa para procesar y entregar las notificaciones push de cobros en tiempo real.</li>
+                            <li>Utilizamos herramientas de reporte de errores para recibir reportes automáticos y anónimos de cierres inesperados de la app, permitiéndonos corregir fallas de software rápidamente.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Publicidad de Terceros (Versión Gratuita):</strong> La versión gratuita de la Aplicación muestra anuncios gestionados por redes de publicidad externa asociadas. Estas redes pueden recopilar identificadores de publicidad anónimos del dispositivo para personalizar los anuncios según sus propias políticas de privacidad. Nosotros no compartimos directamente tus datos de deudas, nombres, montos ni capturas de pantalla con estas redes de anuncios.</li>
+                    <li><strong>Exclusión de Venta de Datos:</strong> Fuera de estos fines técnicos y publicitarios declarados, la Aplicación <strong>no vende, no comparte ni comercializa</strong> sus datos personales o registros financieros con agencias de marketing de terceros.</li>
+                </ul>
+
+                <h3>6. Derechos del Usuario</h3>
+                <p>El Usuario tiene derecho en cualquier momento a solicitar el acceso, corrección o eliminación definitiva de su cuenta y todos sus datos almacenados a través de las opciones dentro de la app o escribiendo a nuestro correo de soporte.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="modal-ok-btn">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS script for Modal behavior -->
+    <script>
+        const modal = document.getElementById('privacy-modal');
+        const openBtnNav = document.getElementById('open-privacy-btn');
+        const openBtnFooter = document.getElementById('open-privacy-footer');
+        const closeBtn = document.getElementById('close-privacy-btn');
+        const okBtn = document.getElementById('modal-ok-btn');
+
+        function openModal(e) {
+            e.preventDefault();
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // prevent scrolling behind modal
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        openBtnNav.addEventListener('click', openModal);
+        openBtnFooter.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+        okBtn.addEventListener('click', closeModal);
+
+        // Close on backdrop click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

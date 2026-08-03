@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <!-- Green Rounded Square (GreenPrimary = #00A868) -->
+  <rect width="36" height="36" rx="8" fill="#00A868" />
+  <!-- White Extra Bold 'D' -->
+  <text x="50%" y="62%" font-family="'Outfit', sans-serif" font-weight="900" font-size="20" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">D</text>
+</svg>
