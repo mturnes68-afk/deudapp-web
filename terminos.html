@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones de Uso - DeudApp</title>
+    <meta name="description" content="Términos y Condiciones de Uso del servicio DeudApp. Conoce los derechos, obligaciones, licencias y garantías de nuestra plataforma.">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Base CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Dedicated Legal Document Styles */
+        .legal-header {
+            padding: 130px 0 50px 0;
+            background: linear-gradient(135deg, rgba(0, 168, 104, 0.08) 0%, rgba(0, 194, 118, 0.03) 100%);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .legal-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(0, 168, 104, 0.12);
+            color: var(--primary-dark);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .legal-header h1 {
+            font-size: 44px;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .legal-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .legal-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legal-wrapper {
+            padding: 60px 0 100px 0;
+            background-color: var(--surface-variant);
+        }
+
+        .legal-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Sidebar Navigation / Table of Contents */
+        .legal-sidebar {
+            position: sticky;
+            top: 110px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .legal-sidebar h4 {
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .legal-nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .legal-nav-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .legal-nav-list a:hover {
+            color: var(--primary);
+            background-color: #EDF7F2;
+            transform: translateX(4px);
+        }
+
+        .legal-nav-list a.active {
+            color: var(--primary-dark);
+            background-color: #E6F6EF;
+            font-weight: 700;
+        }
+
+        /* Legal Content Box */
+        .legal-content-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: var(--shadow);
+        }
+
+        .legal-lead {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Summary Pillars */
+        .summary-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .pillar-card {
+            background-color: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .pillar-icon {
+            width: 44px;
+            height: 44px;
+            background: #E6F6EF;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .pillar-card h5 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+        }
+
+        .pillar-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* Sections */
+        .legal-article {
+            margin-bottom: 44px;
+            scroll-margin-top: 110px;
+        }
+
+        .legal-article:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-title-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .article-num {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            font-weight: 800;
+            font-size: 14px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .legal-article h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .legal-article p {
+            font-size: 15px;
+            color: #4A5568;
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+
+        .legal-article ul {
+            margin-bottom: 18px;
+            padding-left: 20px;
+        }
+
+        .legal-article li {
+            font-size: 15px;
+            color: #4A5568;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .legal-article strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Callout Alerts */
+        .alert-box {
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 20px 0;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .alert-success {
+            background-color: #EDF7F2;
+            border: 1px solid rgba(0, 168, 104, 0.25);
+            color: #1b4d34;
+        }
+
+        .alert-info {
+            background-color: #F0F9FF;
+            border: 1px solid #BAE6FD;
+            color: #0369A1;
+        }
+
+        .alert-warning {
+            background-color: #FFFBEB;
+            border: 1px solid #FDE68A;
+            color: #92400E;
+        }
+
+        .alert-danger {
+            background-color: #FEF2F2;
+            border: 1px solid #FECACA;
+            color: #991B1B;
+        }
+
+        .alert-icon {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .alert-content p {
+            margin-bottom: 0 !important;
+            font-size: 14px !important;
+            color: inherit !important;
+            line-height: 1.6 !important;
+        }
+
+        /* Support Box */
+        .support-cta-card {
+            background: linear-gradient(135deg, #1C2821 0%, #0D1410 100%);
+            border-radius: 20px;
+            padding: 32px;
+            color: white;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .support-cta-text h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .support-cta-text p {
+            color: #A0ABA3;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .btn-support {
+            background-color: var(--primary);
+            color: white;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .btn-support:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .active-nav-link {
+            color: var(--primary) !important;
+            font-weight: 700 !important;
+        }
+
+        @media (max-width: 992px) {
+            .legal-layout {
+                grid-template-columns: 1fr;
+            }
+            .legal-sidebar {
+                display: none;
+            }
+            .legal-content-card {
+                padding: 32px 24px;
+            }
+            .legal-header h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="DeudApp Logo" class="nav-logo-img">
+                <span class="logo-text"><span class="logo-deud">Deud</span><span class="logo-app">App</span></span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#features">Funciones</a>
+                <a href="index.html#pricing">Planes</a>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <a href="terminos.html" class="active-nav-link">Términos</a>
+                <a href="index.html#download" class="btn btn-primary btn-nav">Descargar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- LEGAL HEADER HERO -->
+    <section class="legal-header">
+        <div class="container">
+            <div class="legal-tag">
+                <i data-lucide="file-check-2" style="width: 16px; height: 16px;"></i>
+                Acuerdo de Servicio (SaaS)
+            </div>
+            <h1>Términos y Condiciones de Uso</h1>
+            <div class="legal-meta">
+                <div class="legal-meta-item">
+                    <i data-lucide="calendar" style="width: 16px; height: 16px; color: var(--primary);"></i>
+                    <span>Última actualización: 30 de Agosto de 2026</span>
+                </div>
+                <div class="legal-meta-item">
+                    <i data-lucide="globe" style="width: 16px; height: 16px; color: var(--primary);"></i>
+                    <span>Vigencia: Global / Usuarios de DeudApp</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEGAL MAIN CONTENT -->
+    <div class="legal-wrapper">
+        <div class="container">
+            <div class="legal-layout">
+                
+                <!-- STICKY TABLE OF CONTENTS -->
+                <aside class="legal-sidebar">
+                    <h4>Secciones del Acuerdo</h4>
+                    <ul class="legal-nav-list">
+                        <li><a href="#licencia"><i data-lucide="shield" style="width: 16px; height: 16px;"></i> 1. Licencia de Uso (SaaS)</a></li>
+                        <li><a href="#cuentas"><i data-lucide="user-check" style="width: 16px; height: 16px;"></i> 2. Cuentas y Seguridad</a></li>
+                        <li><a href="#veracidad"><i data-lucide="scale" style="width: 16px; height: 16px;"></i> 3. Veracidad de Registros</a></li>
+                        <li><a href="#dpa"><i data-lucide="users" style="width: 16px; height: 16px;"></i> 4. Encargo de Tratamiento</a></li>
+                        <li><a href="#conducta"><i data-lucide="alert-octagon" style="width: 16px; height: 16px;"></i> 5. Conducta y Prohibiciones</a></li>
+                        <li><a href="#comprobantes"><i data-lucide="receipt" style="width: 16px; height: 16px;"></i> 6. Comprobantes de Pago</a></li>
+                        <li><a href="#planes"><i data-lucide="credit-card" style="width: 16px; height: 16px;"></i> 7. Planes y Suscripciones</a></li>
+                        <li><a href="#responsabilidad"><i data-lucide="help-circle" style="width: 16px; height: 16px;"></i> 8. Límite de Responsabilidad</a></li>
+                        <li><a href="#propiedad"><i data-lucide="sparkles" style="width: 16px; height: 16px;"></i> 9. Propiedad Intelectual</a></li>
+                        <li><a href="#contacto"><i data-lucide="mail" style="width: 16px; height: 16px;"></i> 10. Contacto y Jurisdicción</a></li>
+                    </ul>
+                </aside>
+
+                <!-- MAIN LEGAL TEXT -->
+                <main class="legal-content-card">
+                    
+                    <div class="legal-lead">
+                        Bienvenido a <strong>DeudApp</strong>. Al descargar, instalar, registrarte o utilizar nuestra aplicación móvil o servicios web, aceptas quedar vinculado por los presentes <strong>Términos y Condiciones de Uso</strong>. Si no estás de acuerdo con alguna de las disposiciones aquí establecidas, debes abstenerte de utilizar la plataforma.
+                    </div>
+
+                    <!-- THREE PILLARS -->
+                    <div class="summary-pillars">
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i data-lucide="cpu"></i></div>
+                            <h5>Herramienta Tecnológica</h5>
+                            <p>DeudApp es un software de registro contable y control de saldos entre particulares.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i data-lucide="user-check"></i></div>
+                            <h5>Responsabilidad del Usuario</h5>
+                            <p>El usuario es el único responsable de la veracidad de los montos y deudas anotadas.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i data-lucide="check-shield"></i></div>
+                            <h5>Uso Ético y Legal</h5>
+                            <p>Prohibido el acoso, la extorsión o el registro de deudas inexistentes.</p>
+                        </div>
+                    </div>
+
+                    <!-- SECTIONS -->
+                    <article class="legal-article" id="licencia">
+                        <div class="article-title-row">
+                            <span class="article-num">1</span>
+                            <h2>Licencia de Uso de Software (SaaS)</h2>
+                        </div>
+                        <p>DeudApp te otorga una licencia de uso personal, no exclusiva, intransferible, revocable y limitada para acceder y utilizar nuestra aplicación móvil y plataforma web como herramienta de gestión contable, registro de cuentas por cobrar/pagar y conciliación de abonos.</p>
+                        <p>Esta licencia de Software como Servicio (SaaS) no implica en ningún caso la venta, cesión ni transferencia de titularidad sobre el software, su código fuente, diseño gráfico, algoritmos o marcas asociadas.</p>
+                    </article>
+
+                    <article class="legal-article" id="cuentas">
+                        <div class="article-title-row">
+                            <span class="article-num">2</span>
+                            <h2>Registro, Cuentas de Usuario y Seguridad</h2>
+                        </div>
+                        <p>Para acceder a las funciones completas de sincronización en la nube, debes crear una cuenta proporcionando información veraz, precisa y actualizada:</p>
+                        <ul>
+                            <li><strong>Custodia de Credenciales:</strong> Eres el único responsable de mantener la confidencialidad de tu contraseña y de las actividades que ocurran bajo tu cuenta.</li>
+                            <li><strong>Uso Personal y Comercial:</strong> Puedes utilizar tu cuenta para gestionar ventas individuales o comerciales lícitas de tu negocio.</li>
+                            <li><strong>Notificación de Vulneraciones:</strong> En caso de sospecha de acceso no autorizado, debes notificarnos inmediatamente a nuestro correo de soporte para proteger tu información.</li>
+                        </ul>
+                    </article>
+
+                    <article class="legal-article" id="veracidad">
+                        <div class="article-title-row">
+                            <span class="article-num">3</span>
+                            <h2>Responsabilidad de la Información Registrada</h2>
+                        </div>
+                        <p><strong>El Vendedor o Usuario Registrante es el único y exclusivo responsable</strong> de la exactitud, veracidad y legitimidad de los montos, nombres, conceptos, fechas de vencimiento y saldos que ingrese a la plataforma.</p>
+                        
+                        <div class="alert-box alert-warning">
+                            <div class="alert-icon"><i data-lucide="alert-triangle" style="color: #B45309;"></i></div>
+                            <div class="alert-content">
+                                <p><strong>Aviso Importante:</strong> DeudApp no actúa como entidad financiera, banco, buró de crédito ni agencia de cobranzas judiciales. No verificamos la existencia real de las transacciones subyacentes entre particulares ni intervenimos en disputas comerciales sobre bienes o servicios entregados.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="legal-article" id="dpa">
+                        <div class="article-title-row">
+                            <span class="article-num">4</span>
+                            <h2>Encargo de Tratamiento de Datos (DPA) y Consentimiento de Terceros</h2>
+                        </div>
+                        <p>Al registrar el nombre, número de teléfono o datos de contacto de un comprador o deudor (terceros que aún no posean una cuenta en DeudApp), <strong>el Vendedor declara y garantiza expresamente que:</strong></p>
+                        <ul>
+                            <li>Cuenta con el consentimiento previo, informado y explícito de dicha persona para almacenar sus datos de contacto con fines de seguimiento de la deuda comercial.</li>
+                            <li>Los datos no serán utilizados para finalidades distintas a la gestión de cobro, conciliación de pagos y envío de comprobantes.</li>
+                        </ul>
+                        <p>En este contexto, DeudApp actúa estrictamente en calidad de <em>Encargado de Tratamiento de Datos</em> para proveer la infraestructura tecnológica de almacenamiento y notificación, siendo el Usuario el <em>Responsable del Tratamiento</em> de los datos de sus clientes.</p>
+                    </article>
+
+                    <article class="legal-article" id="conducta">
+                        <div class="article-title-row">
+                            <span class="article-num">5</span>
+                            <h2>Conducta del Usuario y Usos Prohibidos</h2>
+                        </div>
+                        <p>Queda terminantemente prohibido utilizar DeudApp para:</p>
+                        <ul>
+                            <li><strong>Acoso o Amenazas:</strong> Realizar prácticas de cobro intimidatorias, difamatorias, violentas, extorsivas o que vulneren los derechos fundamentales de las personas.</li>
+                            <li><strong>Deudas Fraudulentas:</strong> Registrar deudas ficticias, inexistentes o derivadas de actividades ilícitas (juegos de azar ilegales, estafas o lavado de activos).</li>
+                            <li><strong>Uso Indebido de la Tecnología:</strong> Intentar descompilar, realizar ingeniería inversa, extraer código fuente, vulnerar los mecanismos de seguridad o sobrecargar deliberadamente los servidores de la plataforma.</li>
+                            <li><strong>Suplantación de Identidad:</strong> Crear cuentas haciéndose pasar por otra persona o entidad comercial sin autorización legal.</li>
+                        </ul>
+
+                        <div class="alert-box alert-danger">
+                            <div class="alert-icon"><i data-lucide="shield-alert" style="color: #DC2626;"></i></div>
+                            <div class="alert-content">
+                                <p><strong>Cancelación Inmediata:</strong> Nos reservamos el derecho de suspender o rescindir unilateralmente y sin previo aviso la cuenta de cualquier usuario que incumpla estas normas éticas y de conducta.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="legal-article" id="comprobantes">
+                        <div class="article-title-row">
+                            <span class="article-num">6</span>
+                            <h2>Comprobantes Digitales y Conciliación de Pagos</h2>
+                        </div>
+                        <p>La función de adjuntar capturas de pantalla de Pago Móvil o transferencias bancarias tiene carácter exclusivamente informativo y de soporte entre las partes:</p>
+                        <ul>
+                            <li>El Comprador es responsable de adjuntar comprobantes legítimos correspondientes a transferencias bancarias efectivamente ejecutadas.</li>
+                            <li>El Vendedor tiene la obligación de verificar en su propia cuenta bancaria la acreditación efectiva del dinero antes de confirmar o liquidar el saldo pendiente en la aplicación.</li>
+                            <li>DeudApp no procesa fondos monetarios directos ni se responsabiliza por transferencias bancarias fallidas, estafas bancarias de terceros o reversos de transacciones.</li>
+                        </ul>
+                    </article>
+
+                    <article class="legal-article" id="planes">
+                        <div class="article-title-row">
+                            <span class="article-num">7</span>
+                            <h2>Planes de Servicio, Precios y Suscripciones</h2>
+                        </div>
+                        <p>DeudApp ofrece diferentes modalidades de servicio:</p>
+                        <ul>
+                            <li><strong>Plan Básico (Gratuito):</strong> Permite el uso de las funciones principales de registro de deudas y respaldo offline. Contiene anuncios publicitarios gestionados por redes certificadas.</li>
+                            <li><strong>Plan Premium Pro (De Pago):</strong> Ofrece una experiencia sin anuncios, datos bancarios directos de Pago Móvil, soporte técnico prioritario y funciones avanzadas. Las tarifas y plazos de suscripción se detallan de forma clara en la aplicación y en el sitio web antes de la contratación.</li>
+                        </ul>
+                    </article>
+
+                    <article class="legal-article" id="responsabilidad">
+                        <div class="article-title-row">
+                            <span class="article-num">8</span>
+                            <h2>Limitación de Responsabilidad e Indemnidad</h2>
+                        </div>
+                        <p>DeudApp se proporciona <em>"tal cual"</em> (as is) y según disponibilidad técnica:</p>
+                        <ul>
+                            <li>No garantizamos que el servicio opere de manera ininterrumpida o libre de errores imprevistos derivados de fallas en redes de telecomunicaciones de terceros.</li>
+                            <li>En la máxima medida permitida por la ley aplicable, DeudApp no será responsable por daños indirectos, incidentales, lucro cesante o pérdidas comerciales derivadas del uso o imposibilidad de uso de la aplicación.</li>
+                            <li>El usuario acepta indemnizar y mantener indemne a DeudApp ante cualquier reclamo, demanda o gasto legal presentado por terceros a causa del registro indebido de datos o deudas por parte del usuario.</li>
+                        </ul>
+                    </article>
+
+                    <article class="legal-article" id="propiedad">
+                        <div class="article-title-row">
+                            <span class="article-num">9</span>
+                            <h2>Propiedad Intelectual y Derechos Reservados</h2>
+                        </div>
+                        <p>Todos los derechos de propiedad intelectual sobre DeudApp, incluyendo pero no limitándose a: marcas registradas, logotipos, interfaces de usuario, arquitectura de base de datos, código fuente y contenidos editoriales, son propiedad exclusiva de sus desarrolladores legítimos y están protegidos por las leyes internacionales de propiedad intelectual.</p>
+                    </article>
+
+                    <article class="legal-article" id="contacto">
+                        <div class="article-title-row">
+                            <span class="article-num">10</span>
+                            <h2>Modificaciones, Ley Aplicable y Jurisdicción</h2>
+                        </div>
+                        <p>Nos reservamos el derecho de actualizar o modificar estos Términos en cualquier momento para reflejar cambios normativos o mejoras en la plataforma. El uso continuo de la aplicación tras la publicación de los términos modificados constituye la aceptación plena de los mismos.</p>
+                        <p>Para la resolución de cualquier discrepancia derivada de la interpretación o ejecución de este acuerdo, las partes acuerdan acudir en primera instancia a mecanismos de resolución pacífica y mediación directa.</p>
+                    </article>
+
+                    <!-- CONTACT & SUPPORT BOX -->
+                    <div class="support-cta-card">
+                        <div class="support-cta-text">
+                            <h3>¿Consultas sobre este acuerdo legal?</h3>
+                            <p>Nuestro equipo legal y de atención al usuario está a tu disposición para cualquier aclaratoria.</p>
+                        </div>
+                        <a href="mailto:deudapp.soporte@gmail.com" class="btn-support">
+                            <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                            Contactar Soporte
+                        </a>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 DeudApp. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a> &bull;
+                <a href="politica-privacidad.html">Política de Privacidad</a> &bull;
+                <a href="terminos.html">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Init -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

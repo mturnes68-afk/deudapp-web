@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - DeudApp</title>
+    <meta name="description" content="Política de Privacidad oficial de DeudApp. Conoce cómo protegemos, procesamos y resguardamos tus datos personales y financieros.">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Base CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Dedicated Legal Document Styles */
+        .legal-header {
+            padding: 130px 0 50px 0;
+            background: linear-gradient(135deg, rgba(0, 168, 104, 0.08) 0%, rgba(0, 194, 118, 0.03) 100%);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .legal-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(0, 168, 104, 0.12);
+            color: var(--primary-dark);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .legal-header h1 {
+            font-size: 44px;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .legal-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .legal-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legal-wrapper {
+            padding: 60px 0 100px 0;
+            background-color: var(--surface-variant);
+        }
+
+        .legal-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Sidebar Navigation / Table of Contents */
+        .legal-sidebar {
+            position: sticky;
+            top: 110px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .legal-sidebar h4 {
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .legal-nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .legal-nav-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .legal-nav-list a:hover {
+            color: var(--primary);
+            background-color: #EDF7F2;
+            transform: translateX(4px);
+        }
+
+        .legal-nav-list a.active {
+            color: var(--primary-dark);
+            background-color: #E6F6EF;
+            font-weight: 700;
+        }
+
+        /* Legal Content Box */
+        .legal-content-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: var(--shadow);
+        }
+
+        .legal-lead {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-primary);
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Summary Pillars */
+        .summary-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .pillar-card {
+            background-color: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .pillar-icon {
+            width: 44px;
+            height: 44px;
+            background: #E6F6EF;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .pillar-card h5 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+        }
+
+        .pillar-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* Sections */
+        .legal-article {
+            margin-bottom: 44px;
+            scroll-margin-top: 110px;
+        }
+
+        .legal-article:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-title-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .article-num {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            font-weight: 800;
+            font-size: 14px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .legal-article h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        .legal-article p {
+            font-size: 15px;
+            color: #4A5568;
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+
+        .legal-article ul {
+            margin-bottom: 18px;
+            padding-left: 20px;
+        }
+
+        .legal-article li {
+            font-size: 15px;
+            color: #4A5568;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .legal-article strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Callout Alerts */
+        .alert-box {
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 20px 0;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .alert-success {
+            background-color: #EDF7F2;
+            border: 1px solid rgba(0, 168, 104, 0.25);
+            color: #1b4d34;
+        }
+
+        .alert-info {
+            background-color: #F0F9FF;
+            border: 1px solid #BAE6FD;
+            color: #0369A1;
+        }
+
+        .alert-warning {
+            background-color: #FFFBEB;
+            border: 1px solid #FDE68A;
+            color: #92400E;
+        }
+
+        .alert-icon {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .alert-content p {
+            margin-bottom: 0 !important;
+            font-size: 14px !important;
+            color: inherit !important;
+            line-height: 1.6 !important;
+        }
+
+        /* Support Box */
+        .support-cta-card {
+            background: linear-gradient(135deg, #1C2821 0%, #0D1410 100%);
+            border-radius: 20px;
+            padding: 32px;
+            color: white;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .support-cta-text h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .support-cta-text p {
+            color: #A0ABA3;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .btn-support {
+            background-color: var(--primary);
+            color: white;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .btn-support:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .active-nav-link {
+            color: var(--primary) !important;
+            font-weight: 700 !important;
+        }
+
+        @media (max-width: 992px) {
+            .legal-layout {
+                grid-template-columns: 1fr;
+            }
+            .legal-sidebar {
+                display: none;
+            }
+            .legal-content-card {
+                padding: 32px 24px;
+            }
+            .legal-header h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="DeudApp Logo" class="nav-logo-img">
+                <span class="logo-text"><span class="logo-deud">Deud</span><span class="logo-app">App</span></span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#features">Funciones</a>
+                <a href="index.html#pricing">Planes</a>
+                <a href="politica-privacidad.html" class="active-nav-link">Privacidad</a>
+                <a href="terminos.html">Términos</a>
+                <a href="index.html#download" class="btn btn-primary btn-nav">Descargar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- LEGAL HEADER HERO -->
+    <section class="legal-header">
+        <div class="container">
+            <div class="legal-tag">
+                <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
+                Documento Legal Oficial
+            </div>
+            <h1>Política de Privacidad</h1>
+            <div class="legal-meta">
+                <div class="legal-meta-item">
+                    <i data-lucide="calendar" style="width: 16px; height: 16px; color: var(--primary);"></i>
+                    <span>Última actualización: 30 de Agosto de 2026</span>
+                </div>
+                <div class="legal-meta-item">
+                    <i data-lucide="smartphone" style="width: 16px; height: 16px; color: var(--primary);"></i>
+                    <span>Aplica a: App Android DeudApp y Plataforma Web</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEGAL MAIN CONTENT -->
+    <div class="legal-wrapper">
+        <div class="container">
+            <div class="legal-layout">
+                
+                <!-- STICKY TABLE OF CONTENTS -->
+                <aside class="legal-sidebar">
+                    <h4>Contenido del Documento</h4>
+                    <ul class="legal-nav-list">
+                        <li><a href="#responsable"><i data-lucide="user-check" style="width: 16px; height: 16px;"></i> 1. Responsable del Tratamiento</a></li>
+                        <li><a href="#datos-recopilados"><i data-lucide="database" style="width: 16px; height: 16px;"></i> 2. Datos que Recopilamos</a></li>
+                        <li><a href="#permisos"><i data-lucide="key" style="width: 16px; height: 16px;"></i> 3. Permisos del Dispositivo</a></li>
+                        <li><a href="#uso-datos"><i data-lucide="cpu" style="width: 16px; height: 16px;"></i> 4. Finalidad y Uso de Datos</a></li>
+                        <li><a href="#seguridad"><i data-lucide="lock" style="width: 16px; height: 16px;"></i> 5. Seguridad y Resguardo</a></li>
+                        <li><a href="#terceros"><i data-lucide="share-2" style="width: 16px; height: 16px;"></i> 6. Proveedores y Publicidad</a></li>
+                        <li><a href="#derechos"><i data-lucide="user-x" style="width: 16px; height: 16px;"></i> 7. Derechos y Eliminación</a></li>
+                        <li><a href="#modificaciones"><i data-lucide="refresh-cw" style="width: 16px; height: 16px;"></i> 8. Modificaciones</a></li>
+                    </ul>
+                </aside>
+
+                <!-- MAIN LEGAL TEXT -->
+                <main class="legal-content-card">
+                    
+                    <div class="legal-lead">
+                        En <strong>DeudApp</strong> (en adelante "la Aplicación", "la Plataforma" o "nosotros"), nos tomamos muy en serio la privacidad y confidencialidad de tus datos personales y transaccionales. Esta Política de Privacidad describe de forma clara y transparente cómo recopilamos, utilizamos, almacenamos y protegemos tu información cuando utilizas nuestra aplicación móvil y servicios web asociados.
+                    </div>
+
+                    <!-- THREE PILLARS -->
+                    <div class="summary-pillars">
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i data-lucide="lock"></i></div>
+                            <h5>Encriptación Total</h5>
+                            <p>Tus transacciones viajan seguras mediante cifrado HTTPS / TLS de extremo a extremo.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i data-lucide="shield-off"></i></div>
+                            <h5>Cero Venta de Datos</h5>
+                            <p>Jamás vendemos, alquilamos ni comercializamos tu información financiera con terceros.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i data-lucide="trash-2"></i></div>
+                            <h5>Derecho al Olvido</h5>
+                            <p>Puedes solicitar la eliminación total de tu cuenta y registros en cualquier momento.</p>
+                        </div>
+                    </div>
+
+                    <!-- SECTIONS -->
+                    <article class="legal-article" id="responsable">
+                        <div class="article-title-row">
+                            <span class="article-num">1</span>
+                            <h2>Responsable del Tratamiento de los Datos</h2>
+                        </div>
+                        <p>El responsable legal del tratamiento de los datos personales y transaccionales recabados a través de la aplicación DeudApp es el equipo de desarrollo y administración de DeudApp.</p>
+                        <p>Para cualquier duda, solicitud de ejercicio de derechos de privacidad o consulta relativa a esta política, puedes ponerte en contacto directamente con nuestro Oficial de Privacidad a través del correo electrónico: <strong>deudapp.soporte@gmail.com</strong>.</p>
+                    </article>
+
+                    <article class="legal-article" id="datos-recopilados">
+                        <div class="article-title-row">
+                            <span class="article-num">2</span>
+                            <h2>Información y Datos Personales que Recopilamos</h2>
+                        </div>
+                        <p>DeudApp recopila estrictamente los datos necesarios para brindar las funciones de control de cuentas por cobrar, cuentas por pagar y confirmación de abonos:</p>
+                        <ul>
+                            <li><strong>Datos de Cuenta y Perfil:</strong> Al registrarte o iniciar sesión, recopilamos tu nombre completo, correo electrónico y número de teléfono celular.</li>
+                            <li><strong>Datos para Cobros y Pago Móvil (Vendedores):</strong> Para permitir que tus compradores te transfieran o hagan Pago Móvil con exactitud, almacenamos tu número de Cédula de Identidad (C.I.), número de teléfono receptor y Banco destino. Estos datos se muestran únicamente a tus compradores vinculados para fines del pago.</li>
+                            <li><strong>Datos de Transacciones y Deudas:</strong> Montos adeudados o cobrados, conceptos o descripciones de ventas, fechas de vencimiento, nombres de clientes y registros de historial de abonos.</li>
+                            <li><strong>Comprobantes Digitales de Pago:</strong> Imágenes o capturas de pantalla de recibos de pago que los usuarios decidan adjuntar voluntariamente como soporte probatorio de un abono bancario.</li>
+                            <li><strong>Datos Técnicos y de Diagnóstico:</strong> Identificador anónimo de dispositivo e ID de notificaciones push (Firebase Cloud Messaging) para la entrega inmediata de alertas sobre nuevos cobros o confirmaciones de pago.</li>
+                        </ul>
+
+                        <div class="alert-box alert-success">
+                            <div class="alert-icon"><i data-lucide="check-circle-2" style="color: var(--primary);"></i></div>
+                            <div class="alert-content">
+                                <p><strong>Transparencia sobre Contactos de tu Teléfono:</strong> La app ofrece una función opcional para seleccionar un contacto de tu agenda y autocompletar el nombre y teléfono del cliente. <strong>DeudApp NO sube ni almacena tu libreta de contactos completa</strong> en nuestros servidores; únicamente se procesa de forma local el contacto individual que tú elijas manualmente.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="legal-article" id="permisos">
+                        <div class="article-title-row">
+                            <span class="article-num">3</span>
+                            <h2>Permisos del Dispositivo Requeridos</h2>
+                        </div>
+                        <p>Para su correcto funcionamiento en Android, DeudApp puede solicitar los siguientes permisos de hardware y sistema operativo:</p>
+                        <ul>
+                            <li><strong>Cámara y Almacenamiento (Galería):</strong> Requerido únicamente cuando decides tomar una foto o adjuntar una captura de pantalla de un comprobante bancario. Puedes denegar este permiso y seguir usando el resto de la aplicación normalmente.</li>
+                            <li><strong>Acceso a Contactos (Opcional):</strong> Utilizado de forma puntual para facilitarte la selección del número telefónico de un deudor desde tu libreta de direcciones.</li>
+                            <li><strong>Acceso a Red e Internet:</strong> Necesario para sincronizar tus transacciones con la base de datos en la nube y respaldar tus datos.</li>
+                            <li><strong>Autenticación Biométrica (Huella / Reconocimiento Facial):</strong> Empleado exclusivamente de forma local por el hardware de tu teléfono para el bloqueo de seguridad de la app. Tus rasgos biométricos nunca salen de tu dispositivo ni son accesibles por DeudApp.</li>
+                        </ul>
+                    </article>
+
+                    <article class="legal-article" id="uso-datos">
+                        <div class="article-title-row">
+                            <span class="article-num">4</span>
+                            <h2>Finalidad y Uso de la Información</h2>
+                        </div>
+                        <p>Utilizamos la información recopilada para las siguientes finalidades legítimas:</p>
+                        <ul>
+                            <li>Gestionar la contabilidad de deudas y créditos en tiempo real entre vendedores y compradores.</li>
+                            <li>Permitir el funcionamiento fuera de línea (offline) y sincronizar los cambios tan pronto se restablezca la conexión a internet.</li>
+                            <li>Facilitar el envío de recordatorios de cobro y resúmenes de deuda a través de canales directos como WhatsApp.</li>
+                            <li>Verificar y conciliar comprobantes de pago adjuntos para liquidar saldos pendientes.</li>
+                            <li>Detectar errores técnicos y garantizar la estabilidad y seguridad de la plataforma.</li>
+                        </ul>
+                    </article>
+
+                    <article class="legal-article" id="seguridad">
+                        <div class="article-title-row">
+                            <span class="article-num">5</span>
+                            <h2>Seguridad, Encriptación y Resguardo</h2>
+                        </div>
+                        <p>Implementamos rigurosas medidas de seguridad técnicas y organizativas para proteger tus datos contra accesos no autorizados, alteración o pérdida:</p>
+                        <ul>
+                            <li><strong>Cifrado en Tránsito:</strong> Todas las comunicaciones entre la aplicación móvil y nuestros servidores en la nube están protegidas mediante protocolos SSL/TLS con encriptación HTTPS.</li>
+                            <li><strong>Aislamiento de Cuentas:</strong> Reglas estrictas de seguridad en base de datos garantizan que ningún usuario pueda consultar, modificar ni eliminar registros financieros que no pertenezcan a su cuenta o a transacciones compartidas explícitamente.</li>
+                            <li><strong>Almacenamiento Local Seguro:</strong> La información almacenada en tu teléfono para el modo sin conexión se resguarda dentro del espacio privado de almacenamiento de la aplicación.</li>
+                        </ul>
+                    </article>
+
+                    <article class="legal-article" id="terceros">
+                        <div class="article-title-row">
+                            <span class="article-num">6</span>
+                            <h2>Proveedores de Servicios y Publicidad de Terceros</h2>
+                        </div>
+                        <p>Para la infraestructura técnica y sostenibilidad del servicio, trabajamos con proveedores tecnológicos líderes que cumplen con altos estándares internacionales de privacidad:</p>
+                        <ul>
+                            <li><strong>Google Play Services:</strong> Para la distribución, actualización y estadísticas anónimas de rendimiento de la aplicación.</li>
+                            <li><strong>Google Firebase (Cloud Firestore, Auth, FCM & Crashlytics):</strong> Proveedor de base de datos segura en la nube, autenticación de usuarios, entrega de notificaciones push y reportes anónimos de fallos técnicos para corregir errores.</li>
+                            <li><strong>Publicidad en la Versión Gratuita:</strong> La versión gratuita de DeudApp muestra anuncios gestionados por redes publicitarias certificadas (como Google AdMob). Estas redes pueden emplear el identificador de publicidad anónimo de tu dispositivo para mostrar anuncios relevantes según sus propias políticas. <strong>DeudApp no entrega tus deudas, montos ni nombres a las redes publicitarias.</strong> Los usuarios del Plan Premium disfrutan de una experiencia 100% libre de anuncios.</li>
+                        </ul>
+
+                        <div class="alert-box alert-warning">
+                            <div class="alert-icon"><i data-lucide="alert-triangle" style="color: #B45309;"></i></div>
+                            <div class="alert-content">
+                                <p><strong>Garantía de No Comercialización:</strong> DeudApp no vende, no alquila y no intercambia bases de datos con intermediarios de mercadeo ni entidades financieras de crédito.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="legal-article" id="derechos">
+                        <div class="article-title-row">
+                            <span class="article-num">7</span>
+                            <h2>Derechos del Usuario y Eliminación de Datos</h2>
+                        </div>
+                        <p>Como titular de tus datos personales, tienes derecho en cualquier momento a:</p>
+                        <ul>
+                            <li><strong>Acceder y Rectificar:</strong> Consultar y corregir tus datos personales y de cobro dentro del menú de Configuración de la aplicación.</li>
+                            <li><strong>Solicitar la Eliminación Definitiva (Derecho al Olvido):</strong> Puedes solicitar el borrado permanente e irreversible de tu cuenta de usuario, tus deudas registradas y todos los comprobantes asociados.</li>
+                        </ul>
+                        <p>Para ejercer tu derecho de eliminación, puedes utilizar la opción de eliminación de cuenta dentro de la app o enviar un correo con el asunto <em>"Solicitud de Eliminación de Datos"</em> a <strong>deudapp.soporte@gmail.com</strong> desde el correo asociado a tu cuenta. Tu solicitud será procesada en un plazo máximo de 48 horas hábiles.</p>
+                    </article>
+
+                    <article class="legal-article" id="modificaciones">
+                        <div class="article-title-row">
+                            <span class="article-num">8</span>
+                            <h2>Modificaciones a esta Política</h2>
+                        </div>
+                        <p>Nos reservamos el derecho de actualizar esta Política de Privacidad para adaptarla a novedades legislativas, mejoras en la aplicación o nuevas funcionalidades. Notificaremos cualquier cambio sustancial publicando la nueva versión en este sitio web y actualizando la fecha de <em>"Última actualización"</em> en la parte superior.</p>
+                    </article>
+
+                    <!-- CONTACT & SUPPORT BOX -->
+                    <div class="support-cta-card">
+                        <div class="support-cta-text">
+                            <h3>¿Tienes dudas sobre nuestra privacidad?</h3>
+                            <p>Escríbenos directamente y nuestro equipo responderá tus inquietudes técnicas o legales.</p>
+                        </div>
+                        <a href="mailto:deudapp.soporte@gmail.com" class="btn-support">
+                            <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                            Contactar Soporte
+                        </a>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 DeudApp. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a> &bull;
+                <a href="politica-privacidad.html">Política de Privacidad</a> &bull;
+                <a href="terminos.html">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Init -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
