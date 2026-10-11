@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminación de Cuenta - DeudApp</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2d3748;
+        }
+        h1 {
+            color: #0d9488;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #64748b;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        .card-info {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #334155;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        button.btn-submit {
+            background: #0d9488;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            width: 100%;
+        }
+        button.btn-submit:hover {
+            background: #0f766e;
+        }
+        .footer-note {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-top: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="margin-bottom: 20px;">
+            <a href="index.html" style="color: #0d9488; text-decoration: none; font-weight: 600; font-size: 14px;">&larr; Volver al Inicio</a>
+        </div>
+        <h1>Solicitud de Eliminación de Cuenta y Datos</h1>
+        <p class="subtitle">Conforme a la Política de Seguridad de Datos del Usuario de Google Play Store</p>
+        
+        <div class="card-info">
+            <p><strong>🔒 Privacidad Garantizada:</strong> Si decides eliminar tu cuenta de DeudApp, procesaremos la eliminación completa de tus credenciales de acceso, número de teléfono y datos asociados en un plazo máximo de 48 horas hábiles.</p>
+        </div>
+
+        <form action="mailto:soporte@deud.app" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre registrado en DeudApp" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico Registrado:</label>
+                <input type="email" id="email" name="Correo" placeholder="vendedora@ejemplo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono Registrado:</label>
+                <input type="text" id="telefono" name="Telefono" placeholder="04121234567" required>
+            </div>
+
+            <div class="form-group">
+                <label for="motivo">Motivo de la eliminación (Opcional):</label>
+                <textarea id="motivo" name="Motivo" rows="3" placeholder="Indica el motivo por el cual deseas eliminar tu cuenta..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Solicitud de Eliminación</button>
+        </form>
+
+        <p class="footer-note">DeudApp &copy; 2026. Todos los derechos reservados. Contacto directo: soporte@deud.app</p>
+    </div>
+</body>
+</html>
